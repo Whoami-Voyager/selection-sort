@@ -1,5 +1,15 @@
 function selectionSort(arr) {
-  // type your code here
+  const sortedArr = []
+
+  while (arr.length > 0){
+    const min = Math.min(...arr);
+    const indx = arr.indexOf(min)
+
+    sortedArr.push(min)
+    arr.splice(indx, 1)
+  }
+
+  return sortedArr
 }
 
 if (require.main === module) {
@@ -21,3 +31,6 @@ module.exports = selectionSort;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+// the function takes in the array, and loops through it. 
+// it takes the Math.min of that array value and unshifts it to the beginning of an array
